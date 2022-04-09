@@ -15,12 +15,12 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-## to generate model.g.dart files run:
+## To generate model.g.dart files run:
 ```bash
 flutter pub build run build_runner     
 ```
 
-## to run the app:
+## To run the app:
 ```bash
 flutter run --no-sound-null-safety                     
 ```
