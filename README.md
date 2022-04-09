@@ -1,4 +1,4 @@
-# weather app
+# Weather App
 
 Ranks admission test, you can find more details about it here: https://docs.google.com/document/d/1BGvflI4h_jmI4F67a_ysi6HeJASRL5qUDuA3gWnCZVw/edit?usp=sharing
 
