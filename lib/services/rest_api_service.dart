@@ -55,8 +55,26 @@ class WeatherApiService {
         constants.locations[element][1],
       );
       weather.city = element;
-      weather.iconUrl = 'assets/sun.svg';
-      weather.image = 'assets/night.jpg';
+      print(weather.weatherType);
+      if (weather.weatherType!.toLowerCase().contains('cloud') ||
+          weather.weatherType!.toLowerCase().contains('пасмурно')) {
+        weather.iconUrl = 'assets/cloudy.svg';
+        weather.image = 'assets/cloudy.jpeg';
+      } else if (weather.weatherType!.toLowerCase().contains('rain') ||
+          weather.weatherType!.toLowerCase().contains('дождь')) {
+        weather.iconUrl = 'assets/rain.svg';
+        weather.image = 'assets/rainy.jpg';
+      } else if (weather.weatherType!.toLowerCase().contains('sun') ||
+          weather.weatherType!.toLowerCase().contains('ясно') ||
+          weather.weatherType!.toLowerCase().contains('clear') ||
+          (weather.dateTime! <= weather.sunset &&
+              weather.dateTime! >= weather.sunrise)) {
+        weather.iconUrl = 'assets/sun.svg';
+        weather.image = 'assets/sunny.jpg';
+      } else {
+        weather.iconUrl = 'assets/moon.svg';
+        weather.image = 'assets/night.jpg';
+      }
       citiesWeather.add(weather);
       constants.streamController.sink.add(citiesWeather);
     }

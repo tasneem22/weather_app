@@ -80,6 +80,21 @@ class SingleWeather extends StatelessWidget {
                               color: Colors.white,
                             ),
                           ),
+                          Spacer(),
+                          TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              "Next Week Forcast",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            style: TextButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    side: BorderSide(
+                                        color: Colors.white, width: 1),
+                                    borderRadius: BorderRadius.circular(5))),
+                          ),
                         ],
                       ),
                     ],
